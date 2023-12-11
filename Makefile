@@ -1,6 +1,6 @@
 gitrev := $(shell git rev-parse --short=10 HEAD)
 VENV_NAME := venv
-now := $(shell date --utc +%Y%m%dT%H%MZ)
+now := $(shell date -u +%Y%m%dT%H%MZ)
 github3_version:=1.1.0-$(now)-$(gitrev)
 port := 8888
 image_to_use := offboard-slim
